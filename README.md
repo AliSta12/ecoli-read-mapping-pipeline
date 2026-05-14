@@ -38,6 +38,10 @@ RefSeq: GCF_000005845.2
 
 FASTQ preprocessing → BWA-MEM mapping → BAM processing → duplicate removal → SNV calling → VCF merging → hybrid assembly → QUAST evaluation
 
+## Workflow Overview
+
+![Workflow Overview](figures/workflow_overview.png)
+
 ---
 
 # Workflow
