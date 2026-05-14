@@ -34,6 +34,12 @@ RefSeq: GCF_000005845.2
 
 ---
 
+# Pipeline Summary
+
+FASTQ preprocessing → BWA-MEM mapping → BAM processing → duplicate removal → SNV calling → VCF merging → hybrid assembly → QUAST evaluation
+
+---
+
 # Workflow
 
 ## 1. Reference Genome Indexing
@@ -49,6 +55,7 @@ Generated index files:
 - `.fai`
 
 Script:
+
 ```bash
 scripts/index_reference.sh
 ```
@@ -60,11 +67,13 @@ scripts/index_reference.sh
 Trimmed paired-end Illumina reads were mapped to the *E. coli* K-12 reference genome using BWA-MEM.
 
 Script:
+
 ```bash
 scripts/map_rep1_bwa.sh
 ```
 
 Output preview:
+
 ```text
 results/SAM.txt
 ```
@@ -76,11 +85,13 @@ results/SAM.txt
 SAM files were converted to BAM format, sorted, and indexed using Samtools.
 
 Script:
+
 ```bash
 scripts/samtools_processing.sh
 ```
 
 Output preview:
+
 ```text
 results/BAM.txt
 ```
@@ -94,11 +105,13 @@ PCR duplicates were removed using:
 - `samtools markdup`
 
 Script:
+
 ```bash
 scripts/remove_duplicates.sh
 ```
 
 Final processed BAM:
+
 ```text
 Ecoli_rep1_dedup.bam
 ```
@@ -121,6 +134,7 @@ Pipeline steps:
 - duplicate removal
 
 Script:
+
 ```bash
 scripts/mapping.sh
 ```
@@ -139,6 +153,7 @@ Parameters:
 - haploid ploidy model: `--ploidy 1`
 
 Scripts:
+
 ```bash
 scripts/bcftools_mpileup_rep1.sh
 scripts/bcftools_call_rep1.sh
@@ -147,6 +162,7 @@ scripts/merge_vcfs.sh
 ```
 
 Variant preview:
+
 ```text
 results/variants_1.txt
 ```
@@ -164,11 +180,13 @@ SPAdes options:
 - `--careful`
 
 Script:
+
 ```bash
 scripts/hybrid_assembly_spades.sh
 ```
 
 Assembly output summary:
+
 ```text
 results/spades_output_files.txt
 ```
@@ -180,11 +198,13 @@ results/spades_output_files.txt
 Assembly quality evaluation was performed using QUAST.
 
 Script:
+
 ```bash
 scripts/quast_analysis.sh
 ```
 
 Included reports:
+
 ```text
 results/report.pdf
 results/report.tsv
@@ -213,7 +233,7 @@ ecoli-read-mapping-pipeline/
 
 # Notes
 
-Large sequencing and intermediate analysis files are not included in this repository:
+Large raw sequencing and intermediate analysis files are excluded from this repository:
 - FASTQ
 - BAM
 - BCF
@@ -243,4 +263,4 @@ The repository focuses on:
 
 Alicja Stachura-Matyjewicz, PhD  
 Medical Laboratory Genetics Specialist  
-Bioinformatics and Genomics Workflow Portfolio
+Computational Genomics Portfolio Project
