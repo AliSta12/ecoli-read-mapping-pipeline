@@ -1,0 +1,9 @@
+SPAdes hybrid assembly output files:
+
+contigs.fasta      Assembled contigs
+scaffolds.fasta    Assembled scaffolds
+spades.log         SPAdes run log
+params.txt         Assembly parameters
+assembly_graph.fastg   Assembly graph representation
+
+Large FASTA assembly outputs are not included in this repository.

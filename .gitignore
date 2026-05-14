@@ -1,0 +1,30 @@
+# Raw sequencing data
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+
+# Alignment files
+*.sam
+*.bam
+*.bai
+
+# Variant calling files
+*.bcf
+*.vcf
+*.vcf.gz
+*.csi
+*.tbi
+
+# Assembly graph / large assembly files
+*.fastg
+*.gfa
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Python / system files
+__pycache__/
+.DS_Store
+Thumbs.db
