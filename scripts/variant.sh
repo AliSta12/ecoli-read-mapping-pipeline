@@ -5,7 +5,7 @@
 # SRR25629154 -> variants_2.vcf.gz
 # SRR25629153 -> variants_3.vcf.gz
 
-REFERENCE="../docs/GCF_000005845.2_ASM584v2_genomic.fna"
+REFERENCE="../reference/ecoli_k12_refseq.fasta"
 
 bcftools mpileup \
   -O b \

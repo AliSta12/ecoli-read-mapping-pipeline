@@ -4,7 +4,7 @@
 # Sample: SRR25629155
 # Input FASTQ files are not included in the repository.
 
-REFERENCE="../docs/GCF_000005845.2_ASM584v2_genomic.fna"
+REFERENCE="../reference/ecoli_k12_refseq.fasta"
 
 READ1="/path/to/SRR25629155_1_trimmed.fastq.gz"
 READ2="/path/to/SRR25629155_2_trimmed.fastq.gz"

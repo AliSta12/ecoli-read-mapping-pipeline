@@ -5,7 +5,7 @@
 # Tools: BWA, Samtools
 # Input FASTQ files are not included in the repository.
 
-REF_GENOME="../docs/GCF_000005845.2_ASM584v2_genomic.fna"
+REF_GENOME="../reference/ecoli_k12_refseq.fasta"
 
 samples=("SRR25629154" "SRR25629153")
 

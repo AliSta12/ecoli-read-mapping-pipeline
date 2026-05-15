@@ -3,7 +3,7 @@
 # Reference genome indexing using BWA
 # Reference: Escherichia coli K-12, RefSeq GCF_000005845.2
 
-REFERENCE="../docs/GCF_000005845.2_ASM584v2_genomic.fna"
+REFERENCE="../reference/ecoli_k12_refseq.fasta"
 
 echo "Indexing reference genome with BWA..."
 bwa index "$REFERENCE"
