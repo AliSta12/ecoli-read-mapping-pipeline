@@ -43,6 +43,7 @@ FASTQ preprocessing → BWA-MEM mapping → BAM processing → duplicate removal
 ![Workflow Overview](figures/workflow_overview.png)
 
 ---
+
 ## Quality Control
 
 Raw sequencing reads were assessed using FastQC and aggregated using MultiQC.
@@ -57,7 +58,9 @@ Quality control evaluation included:
 Reads were trimmed using Trimmomatic prior to downstream analyses.
 
 Comparison of biological replicates revealed differences in duplication levels between samples, particularly in reverse reads.
-___
+
+---
+
 ## Skills Demonstrated
 
 - NGS quality control
@@ -73,7 +76,8 @@ ___
 - Bash workflow automation
 - Linux command-line bioinformatics
 - Conda environment management
-___
+
+---
 
 ## Reproducibility
 
@@ -88,7 +92,8 @@ Key bioinformatics tools used in this project include:
 - QUAST
 - FastQC
 - MultiQC
-___
+
+---
 
 # Workflow
 
@@ -125,7 +130,7 @@ scripts/map_rep1_bwa.sh
 Output preview:
 
 ```text
-results/SAM.txt
+results/mapping/SAM.txt
 ```
 
 ---
@@ -143,7 +148,7 @@ scripts/samtools_processing.sh
 Output preview:
 
 ```text
-results/BAM.txt
+results/mapping/BAM.txt
 ```
 
 ---
@@ -214,7 +219,7 @@ scripts/merge_vcfs.sh
 Variant preview:
 
 ```text
-results/variants_1.txt
+results/variants/variants_1.txt
 ```
 
 ---
@@ -238,7 +243,7 @@ scripts/hybrid_assembly_spades.sh
 Assembly output summary:
 
 ```text
-results/spades_output_files.txt
+results/assembly/spades_output_files.txt
 ```
 
 ---
@@ -256,10 +261,10 @@ scripts/quast_analysis.sh
 Included reports:
 
 ```text
-results/report.pdf
-results/report.tsv
-results/report.txt
-results/icarus.html
+results/quast/report.pdf
+results/quast/report.tsv
+results/quast/report.txt
+results/quast/icarus.html
 ```
 
 ### Selected assembly metrics
@@ -273,9 +278,17 @@ results/icarus.html
 
 ```text
 ecoli-read-mapping-pipeline/
-├── docs/
+├── environment/
 ├── figures/
+│   └── workflow_overview.png
+├── reference/
+│   └── ecoli_k12_refseq.fasta
 ├── results/
+│   ├── assembly/
+│   ├── mapping/
+│   ├── qc/
+│   ├── quast/
+│   └── variants/
 └── scripts/
 ```
 
@@ -304,6 +317,8 @@ The repository focuses on:
 - BCFtools
 - SPAdes
 - QUAST
+- FastQC
+- MultiQC
 - Bash
 - Linux / WSL
 
