@@ -58,6 +58,37 @@ Reads were trimmed using Trimmomatic prior to downstream analyses.
 
 Comparison of biological replicates revealed differences in duplication levels between samples, particularly in reverse reads.
 ___
+## Skills Demonstrated
+
+- NGS quality control
+- FASTQ preprocessing
+- Read trimming with Trimmomatic
+- Reference genome indexing
+- Short-read mapping with BWA-MEM
+- SAM/BAM processing using Samtools
+- PCR duplicate removal
+- Variant calling with BCFtools
+- Hybrid genome assembly with SPAdes
+- Assembly quality assessment with QUAST
+- Bash workflow automation
+- Linux command-line bioinformatics
+- Conda environment management
+___
+
+## Reproducibility
+
+The analysis was performed using Conda-managed environments to ensure computational reproducibility.
+
+Key bioinformatics tools used in this project include:
+- BWA
+- Samtools
+- BCFtools
+- Trimmomatic
+- SPAdes
+- QUAST
+- FastQC
+- MultiQC
+___
 
 # Workflow
 
