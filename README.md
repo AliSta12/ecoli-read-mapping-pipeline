@@ -43,6 +43,21 @@ FASTQ preprocessing → BWA-MEM mapping → BAM processing → duplicate removal
 ![Workflow Overview](figures/workflow_overview.png)
 
 ---
+## Quality Control
+
+Raw sequencing reads were assessed using FastQC and aggregated using MultiQC.
+
+Quality control evaluation included:
+- per base sequence quality,
+- GC content distribution,
+- duplication levels,
+- adapter contamination,
+- sequence length distribution.
+
+Reads were trimmed using Trimmomatic prior to downstream analyses.
+
+Comparison of biological replicates revealed differences in duplication levels between samples, particularly in reverse reads.
+___
 
 # Workflow
 

@@ -1,0 +1,17 @@
+MultiQC summary
+
+Samples analyzed:
+- SRR25629153
+- SRR25629154
+- SRR25629155
+
+Key observations:
+- GC content was stable across all samples (~49%)
+- No significant adapter contamination detected
+- Per-base sequence quality remained high
+- Biological replicate SRR25629153 showed the highest duplication rate
+  (30.2% in forward reads)
+
+Tools:
+- FastQC v0.12.1
+- MultiQC
